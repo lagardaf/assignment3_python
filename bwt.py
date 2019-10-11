@@ -12,9 +12,7 @@ def bwt(seq):
     #  moves last letter of sequence to start
     for i in range(1, l+1):
         rotations[i-1] = seq[l-i:l] + seq[0:l-i]
-    print rotations
     rotations_alpha = sorted(rotations)    # lists in alphabetical order
-    print rotations_alpha
     k = len(rotations_alpha)
     bwt = ""
     temp = ""
@@ -25,7 +23,7 @@ def bwt(seq):
         bwt += temp[l-1]
         temp = ""
 
-    # print bwt
+    #print bwt
 
 
 bwt(T)
